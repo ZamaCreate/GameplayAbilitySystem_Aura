@@ -38,7 +38,8 @@ class AURAGAME_API UAuraWidgetController : public UObject
 public:
 	UFUNCTION()
 	void SetWidgetControllerParams(const FWidgetControllerParams& WCParams);
-
+	virtual void BroadcastInitialValues();
+	virtual void BindCallbacksToDependecies();
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "WidgetController")
 	TObjectPtr<APlayerController> PlayerController;
